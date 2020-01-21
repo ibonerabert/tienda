@@ -9,25 +9,24 @@ import java.util.Scanner;
 public class pedido
 {
     // instance variables - replace the example below with your own
-    private HashMap<Integer, Producto> map;
-
+    private HashMap<Integer, linea> map;
+    String direccion;
+    String nombreCliente;
     /**
      * Constructor for objects of class pedido
      */
     public pedido()
     {
-        
+        map=new HashMap<>();
        
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public void pedido1()
+    public void añadir(int codigo, linea linea )
     {
-        
+        map.put(codigo, linea);
+    }
+    public void eliminar(int codigo)
+    {
+        map.remove(codigo);
     }
 }
